@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Programacion
+Bundle-SymbolicName: programacion
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: programacion
+Bundle-RequiredExecutionEnvironment: JavaSE-14

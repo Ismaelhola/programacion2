@@ -55,6 +55,23 @@ public class Articulo {
 		return "Codigo: "+codigo+"\nNombre: "+nombre+"\nPrecio: "+precio+"\nStock: "+stock;
 	}
 	
+	@Override
+	public boolean equals(Object o) {
+		if(o == null) {
+			return false;
+		}
+		if(this.getClass() != o.getClass()) {
+			return false;
+		}else {
+			Articulo a = (Articulo) o;
+			if(codigo.equals(a.getcodigo())) {
+				return true;
+			}else {
+				return false;
+			}
+		}
+	}
+	
 	public boolean disponible(int cantidad) {
 		return cantidad<stock;
 	}

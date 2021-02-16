@@ -29,5 +29,20 @@ public class Carrito {
 		}
 		return resultado;
 	}
+	
+	public void meterarticulo(Articulo a, int c) {
+		boolean found = false;
+		for(Articulocarrito ac : pedido) {
+			if(ac.elemento.equals(a)) {
+				ac.cantidad = ac.cantidad+c;
+				found=true;
+			}
+		}
+		if(!found) {
+			Articulocarrito nuevo = new Articulocarrito(a, c);
+			pedido.add(nuevo);
+		}
+		total=calculatotal();
+	}
 
 }

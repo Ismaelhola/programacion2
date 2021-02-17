@@ -44,5 +44,25 @@ public class Carrito {
 		}
 		total=calculatotal();
 	}
+	
+	public String mostrarcarrito() {
+		StringBuilder sb= new StringBuilder();
+		sb.append("Carrito:\n");
+		for(Articulocarrito ac: pedido) {
+			sb.append(ac);
+		}
+		sb.append(" total: ").append(total);
+		if(confirmado) {
+			sb.append("\nEstado: confirmado");
+		}else {
+			sb.append("\nEstado: pendiente");
+		}
+		
+		return sb.toString();
+	}
+	
+	public void confirmar() {
+		confirmado=CONFIRMADO;
+	}
 
 }

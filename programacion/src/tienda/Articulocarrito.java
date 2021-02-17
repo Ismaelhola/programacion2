@@ -22,7 +22,7 @@ public class Articulocarrito {
 	
 	@Override
 	public String toString() {
-		return elemento+" x "+cantidad;
+		return elemento.sinstock()+" x "+cantidad+"\n";
 	}
 
 }

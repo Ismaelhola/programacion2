@@ -75,5 +75,9 @@ public class Articulo {
 	public boolean disponible(int cantidad) {
 		return cantidad<stock;
 	}
+	
+	public String sinstock() {
+		return "Codigo: "+codigo+"\nNombre: "+nombre+"\nPrecio: "+precio;
+	}
 
 }
